@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   before_action :require_same_user, only: [:edit, :update, :destroy]
 
   def show
+    @comments = @article.comments
   end
 
   def index
